@@ -20,7 +20,7 @@ export const Page: React.VFC = () => {
       />
 
       <section>
-        <h2>Pages in Storybook Test1123123123</h2>
+        <h2>Pages in Storybook Test1123123123asdasdasdasd</h2>
         <p>
           We recommend building UIs with a{" "}
           <a
