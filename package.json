@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook s public"
+    "build-storybook": "build-storybook s public",
+    "chromatic": "npx chromatic --project-token=6ec21050b8b5"
   },
   "dependencies": {
     "@types/node": "18.11.10",
@@ -32,7 +33,10 @@
     "@storybook/react": "^6.5.13",
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.3.0",
+    "chromatic": "^6.11.4",
     "eslint-plugin-storybook": "^0.6.7",
     "tsconfig-paths-webpack-plugin": "^4.0.0"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "storybook@0.1.0"
 }
