@@ -16,12 +16,12 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@components": ["components"],
+      "@/*": ["./*"],
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
-      "@apis/*": ["api/*"],
-      "@assets/*": ["assets/*"],
-      "@public/*": ["public/*"]
+      "@style/*": ["style/*"],
+      "@public/*": ["public/*"],
+      "@mocks/*": ["mocks/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
