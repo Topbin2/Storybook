@@ -2,33 +2,29 @@ import axios from "axios";
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import { useEffect, useState } from "react";
 
-export const getTest = async () => {
-  const { data } = await axios.get("/test");
+export const getName = async () => {
+  const { data } = await axios.get("/api/name");
   return data;
 };
 
 const Home = () => {
-  const [test, setTest] = useState<string[]>([]);
+  const [name, setName] = useState<string>("");
 
-  useEffect(() => {
-    fetch("/api/name")
-      .then((res) => res.json())
-      .then((data) => console.log(data))
-      .catch((err) => console.log(err));
-    // .catch((err) => console.log(err));
+  // useEffect(() => {
+  //   getName().then((data) => setName(data));
+  // }, []);
 
-    // fetch("http://localhost:3030/test")
-    //   .then((res) => res.json())
-    //   .then((data) => console.log(data));
-  }, []);
+  const handleName = async () => {
+    const { data } = await axios.get("/api/name");
+    setName(data);
+  };
 
   return (
     <>
       <h1>Home</h1>
       <input />
-      {test.map((el: string) => (
-        <li key={el}>{el}</li>
-      ))}
+      <p>{name}</p>
+      <button onClick={handleName}>getName</button>
     </>
   );
 };

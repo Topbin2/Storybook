@@ -1,6 +1,6 @@
 import { findAllByRole, render, screen, waitFor } from "@testing-library/react";
 import { userEvent } from "@storybook/testing-library";
-import { getTest } from "@/pages";
+import { getName } from "@/pages";
 
 import Home from "@/pages";
 
@@ -19,15 +19,15 @@ describe("Home", () => {
   });
 
   it("getTest", async () => {
-    const result = await getTest();
-    expect(result).toEqual(["test1", "test2"]);
+    const result = await getName();
+    expect(result).toBe("sangbin");
   });
 
-  it("renders test list", async () => {
-    render(<Home />);
-    const list = await screen.findAllByRole("listitem");
-    expect(list).toHaveLength(2);
-    expect(list[0]).toHaveTextContent("test1");
-    expect(list[1]).toHaveTextContent("test2");
-  });
+  // it("renders test list", async () => {
+  //   render(<Home />);
+  //   const list = await screen.findAllByRole("listitem");
+  //   expect(list).toHaveLength(2);
+  //   expect(list[0]).toHaveTextContent("test1");
+  //   expect(list[1]).toHaveTextContent("test2");
+  // });
 });
